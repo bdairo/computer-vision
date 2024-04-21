@@ -1,0 +1,32 @@
+.image-integral-container {
+    display: flex;
+    border: 3px solid black; 
+    padding: 10px; 
+    margin: 10px;
+    min-height: 300px;
+    min-width:fit-content;
+}
+
+.image-integral-container.active {
+    border: none; /* Hide the border when this class is added */
+}
+
+.image-integral-container img {
+    width: 50%;
+    object-fit: contain; 
+    height: auto;
+    margin: 5px;
+}
+
+.stitched-image-container {
+    display: flex;
+    border: 3px solid black; 
+    padding: 10px; 
+    margin-left: 50px;
+    min-height: 50px;
+    width:500px;
+}
+.stitched_image img { 
+    height: 50px;
+    width: auto;
+}

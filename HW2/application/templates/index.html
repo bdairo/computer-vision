@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Camera Calibration and Dimension Calculation</title>
+</head>
+<body>
+    <h1>Homework 2</h1>
+    <hr>
+
+    <!-- Dimension Calculation Form -->
+    <h2>Dimension Calculation</h2>
+    <form id="dimension-form" action="/calculate-dimensions" method="post" enctype="multipart/form-data">
+        <label for="object-image">Upload Image of Object:</label>
+        <input type="file" id="object-image" name="image" onchange="loadObjectImage()">
+        <br>
+        <canvas id="obj-image-canvas" style="border:1px solid black;"></canvas>
+        <br>
+        <label for="distance">Distance to Object (mm):</label>
+        <input type="text" id="distance" name="distance">
+        <br>
+        <input id="point1" name="point1">
+        <input id="point2" name="point2">
+        <button type="submit">Calculate Dimensions</button>
+    </form>
+    <hr>
+
+    <!-- Integral Image Computation -->
+    <h2>Integral Image Computation</h2>
+    <input type="file" id="imageUploadForIntegral" accept="image/*">
+    <button onclick="processIntegral()">Compute Integral Image</button>
+    <div class="image-integral-container">
+        <img id="original-image" />
+        <img id="integral-image" />
+    </div>
+    <hr>
+    
+    <!-- Integral Image Computation -->
+    <h2>Image Stitching</h2>
+    <div class = "prompts">
+        <input type="file" id="stitchImagesUploadInput" accept="image/*" multiple>
+        <button onclick="stitchImages()">Stitch Images</button>
+        <div id="stitch-preview"></div>
+    </div>
+   
+    <div class="stitched-image-container">
+        <img id="stitched_image" src="">
+    </div>
+
+</body>
+
+<script src="../static/js/script.js"></script>
+</html>
